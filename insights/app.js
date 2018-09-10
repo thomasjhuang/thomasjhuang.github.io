@@ -1,11 +1,11 @@
 
 
 $(document).ready(function(){
-	var listCount; 
+	var listCount;
 	var i = 0;
 	var counter = 0;
 	var scenarioNum = 2;
-	$('#menu-option-container').hide();	
+	$('#menu-option-container').hide();
 	$('.user-dropdown').hide();
 	$('.top-panel').width();
 	$('#user-popover').hide();
@@ -17,29 +17,29 @@ $(document).ready(function(){
 	$('#add-button').click(function(){
 		if($(this).attr('data-click-state') == 1){
 			$(this).attr('data-click-state', 0)
-			
-			$('#add-button').addClass('rotated');		
+
+			$('#add-button').addClass('rotated');
 			$('#menu-option-container').css({
 				"position": "absolute",
 				"top": $(this).position().top+7,
 				"left": $(this).position().left
 				});
 
-			$('#menu-option-container').show();	
-			$('#menu-option-container #all').trigger('click');	
-			//all is default 
+			$('#menu-option-container').show();
+			$('#menu-option-container #all').trigger('click');
+			//all is default
 
 			$('#searchfield').insertBefore($('#add-button')).show();
 
 		}else {
 			hideOption();
 		}
-		
+
 		$(document).mouseup(function (e) {
 			var menu = $("#menu-option-container");
 			var search = $('#searchfield');
 			var userPopover = $('#user-popover');
-			//add user popover 
+			//add user popover
 	     	if ((!menu.is(e.target) && menu.has(e.target).length == 0)
 	     		&&(!search.is(e.target) && search.has(e.target).length == 0)) {
 		         hideOption();
@@ -48,7 +48,7 @@ $(document).ready(function(){
 	 	});
 	});
 
-	//Property menu - switching tabs 
+	//Property menu - switching tabs
 	$(document).on('click', '#property-tab li', function(){
 		//update active tab
 		if($(this).attr('id')!= 'more' && $(this).parent().attr('id') != 'user-popover'){
@@ -91,33 +91,18 @@ $(document).ready(function(){
 		$('#menu-option-container .menu-option').show();
 	})
 
-	
-	//show user popover
-	// $(document).on('click', '#caret-down', function(){
-	// 	$('#user-popover').show();
-	// 	$('#user-popover li').show();
-	// 	$(document).mouseup(function (e) {
-	// 		var userPopover = $('#user-popover');
-	// 	    if (!userPopover.is(e.target) && userPopover.has(e.target).length == 0) {
-	// 	         $('#user-popover').hide();
-	// 	    }
-	//  	});
-
-	// });
-
-
-	//select property for users 
+	//select property for users
 	$(document).on('click', '.prop-event li', function(){
-		
+
 		if($(this).attr('class') == 'show-more' ){
 			extendList($(this).parent().attr('id'));
 		}else{
 			cloneClause($(this));
 			hideUserList();
 			hideOption();
-		}	
+		}
 	});
-	//show more -> more items 
+	//show more -> more items
 	function extendList(object){
 		console.log('found evnet' + object);
 		if(object == 'prop-event'){
@@ -155,33 +140,33 @@ $(document).ready(function(){
 			hideUserList();
 			var propertyList = eval('eventPropertyList');
 			console.log('get hereeee')
-			for (i = 0; i< $('ul#prop-event li').length; i++){		
+			for (i = 0; i< $('ul#prop-event li').length; i++){
 				$('ul#prop-event li #item' + i).html(propertyList[i]);
 				$('#prop-event-title').html('Event Properties<span class="dataset-label">Salesforce</span>');
 			}
 		}else if (propertyType == 'user'){
-			$('#prop-recent-event').hide(); //hide recent 
+			$('#prop-recent-event').hide(); //hide recent
 			$('#prop-event-account-all').hide();
 			$('#prop-event').hide();
 			console.log('prop-event hidden');
 			$('.user-dropdown').show();
 			hideUserList();
-		
+
 		}else{
 			showUserList();
 			if(propertyType == 'event'){
 				$('#prop-recent-event').show();
 				$('#prop-event-account-all').hide();
 				$('#prop-event-title').html(propertyType +' Properties<span class="dataset-label">Salesforce</span>');
-				
-			}else if(propertyType == 'contact' || propertyType == 'lead' 
+
+			}else if(propertyType == 'contact' || propertyType == 'lead'
 				|| propertyType == 'account'){
-				$('#prop-recent-event').hide(); //hide recent 
+				$('#prop-recent-event').hide(); //hide recent
 				$('#prop-event-account-all').hide();
 				$('#prop-event-title').html(propertyType +' Properties<span class="dataset-label">Salesforce</span>');
-				
+
 			}else if(propertyType == 'people'){
-				$('#prop-recent-event').hide(); //hide recent 
+				$('#prop-recent-event').hide(); //hide recent
 				$('#prop-event-account-all').hide();
 				$('#prop-event-title').html(propertyType +' Properties<span class="dataset-label">Mixpanel</span>');
 
@@ -192,7 +177,7 @@ $(document).ready(function(){
 			$('#user-popover').hide();
 			if (propertyType != 'more' && propertyType != 'all'){
 				var propertyList = eval( propertyType+'PropertyList');
-				for (i = 0; i< $('ul#prop-event li').length; i++){		
+				for (i = 0; i< $('ul#prop-event li').length; i++){
 					$('ul#prop-event li #item' + i).html(propertyList[i]);
 				}
 			}
@@ -206,24 +191,24 @@ $(document).ready(function(){
 
 	}
 
-	//hide option menu 
+	//hide option menu
 	function hideOption(){
 		$('#add-button').removeClass('rotated');
 		$('#searchfield').hide();
 	    $('#add-button').attr('data-click-state', 1);
-		$('#menu-option-container').hide();	
+		$('#menu-option-container').hide();
 		$('#menu-property').hide();
 		$('#menu-option-container .menu-option').show();
 	}
 
-	//clone property clause 
+	//clone property clause
 	function cloneClause(object){
-		//fetch property name 
+		//fetch property name
 		counter = counter +1;
 		idName = 'property-query'+counter;
 
 		//var propertyName = $('#'+ object.children().attr('id')).html();
-		var propertyName = $('#'+ object.parent().attr('id') + ' #' + 
+		var propertyName = $('#'+ object.parent().attr('id') + ' #' +
 			object.children().attr('id')).html();
 
 		var propertyType = object.parent().find('h3').text();
@@ -234,18 +219,18 @@ $(document).ready(function(){
 			label = "Mixpanel";
 			propertyType = propertyType.replace('Mixpanel', '');
 		}
-		
-		
+
+
 		var cloneOpject = $('#property-query').clone().attr('id',idName);
-		
-		//replace values 
-		cloneOpject.find('div.clause-header span').html(propertyType);	 
-		cloneOpject.find('div.clause-body').html(label+': '+propertyName);	 
+
+		//replace values
+		cloneOpject.find('div.clause-header span').html(propertyType);
+		cloneOpject.find('div.clause-body').html(label+': '+propertyName);
 		cloneOpject.insertBefore($('#searchfield')).show();
 	}
 });
 
-//choose scenarios 
+//choose scenarios
 $('.scenarios li').on('click', function(){
 	scenarioNum = parseInt($('.scenarios li').index(this));
 	changeScenario(scenarioNum);
@@ -253,7 +238,7 @@ $('.scenarios li').on('click', function(){
 	$(this).addClass('activeScene');
 })
 
-//different scenarios 
+//different scenarios
 function changeScenario(num){
 
 	if (num == 0 ){
@@ -265,10 +250,10 @@ function changeScenario(num){
 		$('#property-tab').append('<li id="people">People</li>');
 		$('.menu .menu-header').css({'width':'390px'});
 		$('.menu .menu-header .menu-tab li').removeClass('margin-change');
-	
+
 	}
 	if(num == 1 || num == 2 || num == 3){
-		//change to user 
+		//change to user
 		$('#property-tab #people').hide();
 		// $('#property-tab #user').remove();
 		$('#property-tab #more').remove();
@@ -300,11 +285,11 @@ function changeScenario(num){
 }
 
 function hideUserList(){
-	var list = ['#prop-event-people', 
-				'#prop-event-contact', 
+	var list = ['#prop-event-people',
+				'#prop-event-contact',
 				'#prop-event-lead',
 				'#prop-event-account-all',
-				'#prop-event']; 
+				'#prop-event'];
 	$('.show-more').remove();
 	for(var j = 0; j<list.length; j++){
 
@@ -316,11 +301,11 @@ function hideUserList(){
 }
 
 function showUserList(){
-	var list = ['#prop-event-people', 
-				'#prop-event-contact', 
+	var list = ['#prop-event-people',
+				'#prop-event-contact',
 				'#prop-event-lead',
 				'#prop-event-account-all',
-				'#prop-event']; 
+				'#prop-event'];
 	$('.show-more').remove();
 
 	for(var j = 0; j<list.length; j++){
@@ -332,14 +317,14 @@ function showUserList(){
 
 
 
-//hide some stuff 
+//hide some stuff
 $('.clause-overflow').hide();
 
 
 
 
 var eventPropertyList = [
-'zzAccount ID', 
+'zzAccount ID',
 'Amount',
 'Billing City',
 'Campaign ID',
@@ -361,7 +346,7 @@ var eventPropertyList = [
 ];
 
 var accountPropertyList = [
-'Account ID', 
+'Account ID',
 'ADAU',
 'ARR',
 'Billing city',
@@ -416,7 +401,7 @@ var leadPropertyList = [
 'Converted',
 'Converted Date',
 'Converted opportunity: won',
-'Days to conversion',  
+'Days to conversion',
 'Employees',
 'Event discount',
 'Growth territory',
@@ -442,13 +427,3 @@ var peoplePropertyList = [
 'High risk',
 'Last activity'
 ];
-
-
-
-
-
-
-
-
-
-
