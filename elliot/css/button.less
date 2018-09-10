@@ -1,0 +1,165 @@
+//colours
+@bronze : #CEC19B;
+@bronze-dark: #B3A784;
+@fb : #4F83D8;
+@li : #46abda;
+@gg : #E14827; 
+@font: #51504F;
+@grey: rgba(0, 0, 0, 0.5);
+@grey25: rgba(0, 0, 0, 0.15);
+
+
+//button animation
+
+.button {
+	float: left;
+	display: block;
+	color: inherit;
+	vertical-align: middle;
+	position: relative;
+	z-index: 1;
+	-webkit-backface-visibility: hidden;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.border-radius(@r1, @r2, @r3, @r4, @c, @w){
+	border-radius: @r1 @r2 @r3 @r4; 
+	-moz-border-radius: @r1 @r2 @r3 @r4;
+	-webkit-border-radius: @r1 @r2 @r3 @r4;
+	border: @w solid @c;
+}
+.box-shadow(@r1, @r2, @r3, @r4, @o){
+	-webkit-box-shadow: @r1 @r2 @r3 @r4 rgba(0,0,0,@o);
+	-moz-box-shadow: @r1 @r2 @r3 @r4 rgba(0,0,0,@o);
+	box-shadow: @r1 @r2 @r3 @r4 rgba(0,0,0,@o);
+}
+
+.button.button--aylen {
+	color: white;
+	overflow: hidden;
+	-webkit-transition: blue 0.3s;
+	transition: blue 0.3s;
+}
+
+.button--aylen.button--inverted {
+	background: none;
+	color: #fff;
+}
+.button--aylen::before,
+.button--aylen::after {
+	content: '';
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	bottom: 100%;
+	left: 0;
+	z-index: -1;
+	-webkit-transition: -webkit-transform 0.3s;
+	transition: transform 0.3s;
+	-webkit-transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+	transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+}
+
+
+.invite-form.button--aylen::before,
+.signup-button.button--aylen::before {
+	background: #E1D5B4;
+}
+.invite-form.button--aylen::after,
+.signup-button.button--aylen::after {
+	background: #BCAD81;
+}
+
+.button--aylen:hover {
+	color: #fff;
+}
+.button--aylen:hover::before,
+.button--aylen:hover::after {
+	-webkit-transform: translate3d(0, 100%, 0);
+	transform: translate3d(0, 100%, 0);
+}
+.button--aylen:hover::after {
+	-webkit-transition-delay: 0.175s;
+	transition-delay: 0.175s;
+}
+
+.connect-with{
+	button{
+		display: inline-block;
+		color: white;
+		margin-top: 5px;
+		width: 150px;
+		height: 50px;
+		.box-shadow(0px, 2px, 8px, 0px, 0.10);
+		span{
+			vertical-align: top;
+		}	
+	}
+}
+
+.fb-login{
+	background: @fb;
+	margin-right: 10px;
+	width: 150px;
+	.border-radius(0px, 18px, 18px, 18px, @fb, 0px);
+	span{
+		margin-left: 15px;
+	}
+	img{
+		margin-left: -6px;
+	}
+}//fb-login
+
+.li-login{
+	background: @li;
+	.border-radius(18px, 18px, 18px, 0px, @li, 0px);
+	width: 150px;
+	span{
+		margin-left: 10px;
+	}
+	img{
+		margin-left: 0px;
+	}
+}//li-login
+
+.gg-login{
+	background: @gg;
+	width: 150px;
+	.border-radius(18px, 18px, 18px, 0px, @gg, 0px);
+	span{
+		margin-left: 12px;
+	}
+	img{
+		margin-left: -18px;
+		vertical-align: bottom;
+	}
+}//li-login
+
+.fb-login.button--aylen::before {
+	background: #6E9CE8;
+}
+.fb-login.button--aylen::after {
+	background: #436BAC;
+}
+
+.li-login.button--aylen::before {
+	background: #66BEE7;
+}
+.li-login.button--aylen::after {
+	background: #4592B6;
+}
+
+.gg-login.button--aylen::before {
+	background: #E57056;
+}
+.gg-login.button--aylen::after {
+	background: #E43712;
+}
+
+button.invite-form,
+button.signup-button{
+	height: 50px;
+	border-radius: 0px;
+	background: @bronze - #111111;
+}
+

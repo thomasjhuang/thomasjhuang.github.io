@@ -1,0 +1,87 @@
+
+@greyline : rgba(151,151,151,0.3);
+@bronze-dark: #B3A784;
+@bronze : #CEC19B;
+
+.content-wrapper{
+	width: 50%;
+    max-width: 800px;
+    min-width: 420px;
+    margin: 60px auto 20px;
+}
+form{
+	display: block;
+	margin-bottom: 20px;
+}
+section.top-bar{
+  height: auto;
+  margin: 0px auto 20px;
+  padding-top: 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid @greyline;
+  background-color: white;
+  border-top: 8px solid @bronze-dark;
+  text-align: center;
+
+  span{
+    font-family: 'Crimson Text', serif;
+    font-size: 26px;
+    line-height: 30px;
+    letter-spacing: 0.6px;
+    font-weight: 600;
+  } 
+}
+.signup-text p{
+	font-size: 13px;
+	//max-width: 600px;
+	line-height: 20px;
+}
+input{
+	text-transform: lowercase;
+	letter-spacing: 1px;
+	font-size: 14px;
+	margin: 20px 0px 40px;
+}
+input:focus, input:valid {
+  box-shadow: none;
+  outline: none;
+  background-position: auto;
+}
+
+input:focus::-webkit-input-placeholder, input:valid::-webkit-input-placeholder {
+  visibility: hidden !important;
+}
+.signup{
+	.signup-button{
+		margin-top: 70px;
+	}
+	button.fb-login{
+		margin-top: 20px;
+		height: 50px;
+		span{
+			vertical-align: top;
+		}
+	}
+}
+
+@media(max-width: 480px){
+	.content-wrapper{
+	    max-width: 400px;
+	    min-width: 310px;
+	    margin: 40px auto 20px;
+	    position: relative;
+	    width: 75%;
+	    display: block;
+	}
+	.invite{
+    	min-width: auto;
+    	width: 100%;
+    	input{
+    	  width: 100%;
+    	}
+    	button{
+      	width: 100%;
+    	}
+	}
+}
+

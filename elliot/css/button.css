@@ -1,0 +1,135 @@
+.button {
+  float: left;
+  display: block;
+  color: inherit;
+  vertical-align: middle;
+  position: relative;
+  z-index: 1;
+  -webkit-backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+}
+.button.button--aylen {
+  color: white;
+  overflow: hidden;
+  -webkit-transition: blue 0.3s;
+  transition: blue 0.3s;
+}
+.button--aylen.button--inverted {
+  background: none;
+  color: #fff;
+}
+.button--aylen::before,
+.button--aylen::after {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  bottom: 100%;
+  left: 0;
+  z-index: -1;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  -webkit-transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+  transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+}
+.invite-form.button--aylen::before,
+.signup-button.button--aylen::before {
+  background: #E1D5B4;
+}
+.invite-form.button--aylen::after,
+.signup-button.button--aylen::after {
+  background: #BCAD81;
+}
+.button--aylen:hover {
+  color: #fff;
+}
+.button--aylen:hover::before,
+.button--aylen:hover::after {
+  -webkit-transform: translate3d(0, 100%, 0);
+  transform: translate3d(0, 100%, 0);
+}
+.button--aylen:hover::after {
+  -webkit-transition-delay: 0.175s;
+  transition-delay: 0.175s;
+}
+.connect-with button {
+  display: inline-block;
+  color: white;
+  margin-top: 5px;
+  width: 150px;
+  height: 50px;
+  -webkit-box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.1);
+}
+.connect-with button span {
+  vertical-align: top;
+}
+.fb-login {
+  background: #4f83d8;
+  margin-right: 10px;
+  width: 150px;
+  border-radius: 0px 18px 18px 18px;
+  -moz-border-radius: 0px 18px 18px 18px;
+  -webkit-border-radius: 0px 18px 18px 18px;
+  border: 0px solid #4f83d8;
+}
+.fb-login span {
+  margin-left: 15px;
+}
+.fb-login img {
+  margin-left: -6px;
+}
+.li-login {
+  background: #46abda;
+  border-radius: 18px 18px 18px 0px;
+  -moz-border-radius: 18px 18px 18px 0px;
+  -webkit-border-radius: 18px 18px 18px 0px;
+  border: 0px solid #46abda;
+  width: 150px;
+}
+.li-login span {
+  margin-left: 10px;
+}
+.li-login img {
+  margin-left: 0px;
+}
+.gg-login {
+  background: #e14827;
+  width: 150px;
+  border-radius: 18px 18px 18px 0px;
+  -moz-border-radius: 18px 18px 18px 0px;
+  -webkit-border-radius: 18px 18px 18px 0px;
+  border: 0px solid #e14827;
+}
+.gg-login span {
+  margin-left: 12px;
+}
+.gg-login img {
+  margin-left: -18px;
+  vertical-align: bottom;
+}
+.fb-login.button--aylen::before {
+  background: #6E9CE8;
+}
+.fb-login.button--aylen::after {
+  background: #436BAC;
+}
+.li-login.button--aylen::before {
+  background: #66BEE7;
+}
+.li-login.button--aylen::after {
+  background: #4592B6;
+}
+.gg-login.button--aylen::before {
+  background: #E57056;
+}
+.gg-login.button--aylen::after {
+  background: #E43712;
+}
+button.invite-form,
+button.signup-button {
+  height: 50px;
+  border-radius: 0px;
+  background: #bdb08a;
+}

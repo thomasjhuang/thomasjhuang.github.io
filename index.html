@@ -1,691 +1,155 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html>
+<html lang="en" class="no-js">
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
-	<head>  
-		<title>By Nicole Jiang</title>
-		<meta name="author" content="Nicole Jiang">
-        <meta content="text/html; charset=utf-8" http-equiv="content-type">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=false">
-        <meta name="description" content="Web Developer and UX/UI Designer, Computer Engineering Student at University of Waterloo">
-        <link href="http://fonts.googleapis.com/css?family=Oleo+Script:400,700" rel="stylesheet" type="text/css">
-		<link href='http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800' rel='stylesheet' type='text/css'>
-		<link href='http://fonts.googleapis.com/css?family=Over+the+Rainbow' rel='stylesheet' type='text/css'>
-		<link rel="stylesheet" type="text/css" href="css/jquery.pageslide.css">
-		<link rel="stylesheet" href="style.css">
-		<link rel="icon" type="image/x-icon" href="favicon.ico">
-		<script type="text/javascript" src="js/jquery-1.10.2.js"></script>
-		<script type="text/javascript" src="js/underscore.js"></script>
-	</head>
-	<body>
-		<!-- INTRO -->
-		<div id="sidebar" style="display:none">
-			<div class="sidebar_wrapper">
-				<p class="cursive">nj</p>
-				<ul class="sidebar_links">
-					<li id="mobile_li"><a class="listing_category" id="listing_about" href="#about">About</a></li>
-					<li id="mobile_li"><a class="active listing_category" id="listing_design" href="#portfolio">Design</a></li>
-					<li id="mobile_li"><a class="listing_category" id="listing_jots" href="#jots">Jots</a></li>
-					<hr  id="mobile_li" style="margin-bottom: 20px;">
-					<li id="follow" style="padding-bottom: 7px"><p>Follow me on</p></li>
-					<li><a href="http://www.linkedin.com/in/nicolekjiang"  target="_blank">Linkedin</a></li>
-					<li><a href="http://www.twitter.com/nicolekjiang" target="_blank">Twitter</a></li>
-					<li><a href="http://www.dribbble.com/nicolekjiang" target="_blank">Dribbble</a></li>
-					<li><a href="http://www.instagram.com/nicolekjiang" target="_blank">Instagram</a></li>
-					<hr style="margin-bottom: 20px;">
-					<li id="touch" style="padding-bottom:7px"><p>Get In Touch</p></li>
-					<li><a href="mailto:nicolekjiang@gmail.com">Email</a></li>
-				    <li><a href="resume.pdf" target="_blank">Resume</a></li>
-				</ul>
-				<ul class="sidebar_bottom">
-				</ul>
-			</div>
-		</div><!-- end sidebar -->
-		<section class="intro slide">
-			<button href="#sidebar"id="navbar_toggle">
-				<span class="icon_bar"></span>
-				<span class="icon_bar"></span>
-				<span class="icon_bar"></span>
-			</button>
-			<div class="intro_background"></div>
-			<div class="intro_wrapper"  data-stellar-background-ratio="0.7">
-				<div class="snow" data-stellar-ratio="-0.5" data-stellar-vertical-offset="-150"></div>
-				<div class="content">
-					<p style="text-transform: uppercase;font-size: 12px;">nice to meet you, i am</p>
-					<h1>Nicole Jiang</h1>
-					<p id="title">WEB DEVELOPER | UX/UI DESIGNER</p>
-				</div>
-			</div><!-- end intro_wrapper -->
-			<div class="nav">
-				<ul class="navbar">
-					<li><a class="listing_category" id="listing_about" href="#about">About</a></li>
-					<li><a class="active listing_category" id="listing_design" href="#portfolio">Design</a></li>
-					<li><a class="listing_category" id="listing_jots" href="#jots">Jots</a></li>
-				</ul>
-				<ul class="nav_fixed">
-					<div class="connect">
-						<a href="http://www.twitter.com/nicolekjiang"  target="_blank" class="twitter"></a>
-						<a href="http://www.linkedin.com/in/nicolekjiang" class="linkedin" target="_blank"></a>
-						<a href="http://www.dribbble.com/nicolekjiang" target="_blank" class="dribbble"></a>
-						<a href="mailto:nicolekjiang@gmail.com" class="email"></a>
-					</div>
-					<li><a class="listing_category" id="listing_about"href="#about">About</a></li>
-					<li><a class="active listing_category" id="listing_design" href="#portfolio">Design</a></li>
-					<li><a class="listing_category" id="listing_jots" href="#jots">Jots</a></li>
-				</ul>
-			</div><!-- end nav -->
-		</section>
+    <head>
+        <title>NKJ</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Nicole Jiang - Designer">
+        <meta name="author" content="Nicole Jiang">
 
-		<!--  PORTFOLIO -->
-		<section id="portfolio">
-			<div id="port_container" class="isotope">
-				<div class="item design illustration concept instagram product">
-					<ul id="filters" style="border: 1px solid #E6E6E6;">
-						  <li><a href="" data-filter="*">All</a></li>
-						  <li><a href="" data-filter=".design">Design</a></li>
-						  <li><a href="" data-filter=".illustration">Illustration</a></li>
-						  <li><a href="" data-filter=".concept">Conceptual</a></li>
-						  <li><a href="" data-filter=".instagram">Instagram</a></li>
-						  <li><a href="" data-filter=".product">Product</a></li>
-					</ul>
-				</div>	
+        <meta name="og:image" content="http://nicolejiang.com/1.png">
+        <meta name="og:title" content="By Nicole Jiang">
+        <meta name="og:description" content="Full-stack designer with a fine taste in wine">
+        <meta name="og:url" content="http://www.nicolejiang.com">
 
-				<div class="item design web concept product">
-					<div class="item_info_wrapper">
-						<div class="item_info">
-							<a href="http://waitless.meteor.com" target="_blank">
-								<p>Waitless</p>
-								<p id="description">UI/UX Design</p>
-							</a>
-						</div>
-					</div>
-					<img src="img/portfolio/25.jpg">
-				</div>
-				<div class="item design concept web ">
-					<div class="item_info_wrapper">
-						<div class="item_info">
-							<a href="http://yourflavor.pixlee.com" target="_blank">
-								<p>#yourflavor</p>
-								<p id="description">Pixlee</p>
-							</a>
-						</div>
-					</div>
-					<img data-original="img/portfolio/1.jpg">
-				</div>
-				<div class="item design web concept product">
-					<div class="item_info_wrapper">
-						<div class="item_info">
-							<a href="https://github.com/joemercer/iclicker" target="_blank">
-								<p>Click</p>
-								<p id="description">UI/UX Design</p>
-							</a>
-						</div>
-					</div>
-					<img src="img/portfolio/24.jpg">
-				</div>	
-				<div class="item instagram ">
-					<div class="item_info_wrapper">
-						<div class="item_info">
-							<p>Moments</p>
-							<p id="description">Instagram</p>
-						</div>
-					</div>
-					<img data-original="img/portfolio/ig_1.jpg">
-				</div>
-				<div class="item web design">
-					<div class="item_info_wrapper">
-						<div class="item_info">
-							<p>Collect Box</p>
-							<p id="description">Pixlee</p>
-						</div>
-					</div>
-					<img src="img/portfolio/14.jpg">
-				</div>	
-				<div class="item instagram ">
-					<div class="item_info_wrapper">
-						<div class="item_info">
-							<p>Moments</p>
-							<p id="description">Instagram</p>
-						</div>
-					</div>
-					<img data-original="img/portfolio/ig_2.jpg">
-				</div>
-				<div class="item design web">
-					<div class="item_info_wrapper">
-						<div class="item_info">
-							<a href="http://www.pixlee.com/login" target="_blank">
-								<p>Log In</p>
-								<p id="description">Pixlee</p>
-							</a>
-						</div>
-					</div>
-					<img src="img/portfolio/15.jpg">
-				</div>
-				<div class="item web concept">
-					<div class="item_info_wrapper">
-						<div class="item_info">
-							<a href="http://www.nspire.org" target="_blank">
-								<p>Nspire</p>
-								<p id="description">Site Revamp</p>
-							</a>
-						</div>
-					</div>
-					<img data-original="img/portfolio/3.jpg">
-				</div>
-				<div class="item design illustration">
-					<div class="item_info_wrapper">
-						<div class="item_info">
-							<p>E-Invitation</p>
-							<p id="description">Graphic Design</p>
-						</div>
-					</div>
-					<img src="img/portfolio/12.jpg">
-				</div>
-				<div class="item web design">
-					<div class="item_info_wrapper">
-						<div class="item_info">
-							<p>Landing Page</p>
-							<p id="description">Pixlee</p>
-						</div>
-					</div>
-					<img src="img/portfolio/17.jpg">
-				</div>	
-				<div class="item concept">
-					<div class="item_info_wrapper">
-						<div class="item_info">
-							<a href="http://dribbble.com/shots/1358023-Share-Window-Design-2" target="_blank">
-								<p>Share Box 2</p>
-								<p id="description">Concept Design</p>
-							</a>
-						</div>
-					</div>
-					<img src="img/portfolio/8.jpg">
-				</div>
-				<div class="item instagram">
-					<div class="item_info_wrapper">
-						<div class="item_info">
-							<p>Moments</p>
-							<p id="description">Instagram</p>
-						</div>
-					</div>
-					<img data-original="img/portfolio/ig_3.jpg">
-				</div>
-				<div class="item web concept">
-					<div class="item_info_wrapper">
-						<div class="item_info">
-							<p>#NBTC14</p>
-							<p id="description">Site Revamp</p>
-						</div>
-					</div>
-					<img src="img/portfolio/4.jpg">
-				</div>	
-				<div class="item instagram">
-					<div class="item_info_wrapper">
-						<div class="item_info">
-							<p>Moments</p>
-							<p id="description">Instagram</p>
-						</div>
-					</div>
-					<img src="img/portfolio/ig_5.jpg">
-				</div>	
-				<div class="item concept design web">
-					<div class="item_info_wrapper">
-						<div class="item_info">
-							<p>Pixlee Connect</p>
-							<p id="description">Product Design</p>
-						</div>
-					</div>
-					<img src="img/portfolio/7.jpg">
-				</div>
-			
-				<div class="item design web">
-					<div class="item_info_wrapper">
-						<div class="item_info">
-							<p>#pixleeblog</p>
-							<p id="description">Pixlee</p>
-						</div>
-					</div>
-					<img src="img/portfolio/5.jpg">
-				</div>
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:image" content="http://nicolekjiang.github.io/1.png">
+        <meta name="twitter:title" content="By Nicole Jiang">
+        <meta name="twitter:description" content="Full-stack designer with a fine taste in wine">
+        <meta name="twitter:creator" content="@nicolekjiang">
+        <meta name="twitter:url" content="http://www.nicolejiang.com">
 
-				<div class="item instagram">
-					<div class="item_info_wrapper">
-						<div class="item_info">
-							<p>Moments</p>
-							<p id="description">Instagram</p>
-						</div>
-					</div>
-					<img src="img/portfolio/ig_7.jpg">
-				</div>	
-				<div class="item concept design web">
-					<div class="item_info_wrapper">
-						<div class="item_info">
-							<p>Share Box</p>
-							<p id="description">Conceptual</p>
-						</div>
-					</div>
-					<img data-original="img/portfolio/2.jpg">
-				</div>
-				<div class="item concept web design">
-					<div class="item_info_wrapper">
-						<div class="item_info">
-							<p>Midnight Sun</p>
-							<p id="description">Site Redesign</p>
-						</div>
-					</div>
-					<img src="img/portfolio/9.jpg">
-				</div>
-				<div class="item design product">
-					<div class="item_info_wrapper">
-						<div class="item_info">
-							<p>#ChimeHACK</p>
-							<p id="description">Mobile App Design</p>
-						</div>
-					</div>
-					<img src="img/portfolio/10.jpg">
-				</div>	
+        <!-- css and js and all -->
+        <!-- <link rel="shortcut icon" href="img/anchor.png"> -->
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/reset.css">
+        <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i,900,900i" rel="stylesheet">
+        <link  type="text/css" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+        <link type="text/css" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,600,700" rel="stylesheet">
 
-				<div class="item concept design">
-					<div class="item_info_wrapper">
-						<div class="item_info">
-							<p>Pixlee API</p>
-							<p id="description">Site Creation</p>
-						</div>
-					</div>
-					<img src="img/portfolio/6.jpg">
-				</div>
-				<div class="item illustration design">
-					<div class="item_info_wrapper">
-						<div class="item_info">
-							<p>#ChimeHACK</p>
-							<p id="description">Mobile App Design</p>
-						</div>
-					</div>
-					<img src="img/portfolio/11.jpg">
-				</div>	
-				<div class="item illustration design">
-					<div class="item_info_wrapper">
-						<div class="item_info">
-							<p>BatKid</p>
-							<p id="description">Infographics</p>
-						</div>
-					</div>
-					<img src="img/portfolio/13.jpg">
-				</div>	
-				<div class="item illustation">
-					<div class="item_info_wrapper">
-						<div class="item_info">
-							<p>Eyes</p>
-							<p id="description">Photoshop</p>
-						</div>
-					</div>
-					<img src="img/portfolio/23.jpg">
-				</div>		
 
-				<div class="item instagram">
-					<div class="item_info_wrapper">
-						<div class="item_info">
-							<p>Moments</p>
-							<p id="description">Instagram</p>
-						</div>
-					</div>
-					<img src="img/portfolio/ig_8.jpg">
-				</div>		
-					
 
-	
-				<div class="clearfix">
-				</div>
-			</div> <!-- end port_container -->
-		</section> <!-- end portfolio -->
+        <!-- <script type="text/javascript" src="js/jquery.easing.min.js"></script> -->
+                <script>
+            document.documentElement.className = 'js';
+            var supportsCssVars = function() {
+                var s = document.createElement('style'),
+                support;
 
-		<!-- ABOUT -->
-		<section id="about">
-			<div class="about_dp">
-				<img data-original="img/dp.png">
-				<p class="cursive">Greetings, stranger</p>
-			</div>
-			<div class="about_content">
-				<ul>
-					<li class="about_column">
-						<h4>I am...</h4>
-						<p>A third year Student at University of Waterloo, majoring in Computer Engineering, with a minor in Digital Art.</p> 
-						<p>I like to constantly explore and observe the world and my surroundings - I strive to make our world a better place with my own power and creativity. </p>
-						<p>My interest in art and design drives me to achieve visual aesthetics while the software development process makes me realize the importance of good product design and the power of integration between technology, usability, and aesthetics.</p> 
-					</li>
-					<li class="about_column">
-						<h4>Technical Summary</h4>
-						<p style="font-weight: 400">Avid UI/UX Designer (Photoshop, Illustrator)</p>
-						<p class="indent">&bull; Adobe Photoshop, Illustrator, Indesign</p>
-						<p class="indent">&bull; Workflow, storyboard, prototype for web/mobile applications</p>
-						<p style="font-weight: 400">Front-end Developer (HTML5, CSS3, JS)</p>
-						<p class="indent">&bull; HTML5, CSS3, JS</p>
-						<p class="indent">&bull; Wordpress, Bootstrap, various API Frameworks</p>
-						<p style="font-weight: 400">Diverse Programming Experience</p>
-						<p class="indent">&bull; Object Oriented: C#, C++, C, Python</p>
-						<p class="indent">&bull; Web-based: Ruby on Rails, PHP</p>
-						</p>
-					</li>
-					<li class="about_column">
-						<h4>I also love...</h4>
-						<p style="font-weight: 400">Film & animation</p>
-						<p class="indent">&bull; Adobe Premiere, AfterEffects, 3D Studio Max</p>
-						<p style="font-weight: 400">Capturing beautiful photographs </p>
-						<p class="indent">&bull; Flickr, Instagram</p>
-						<p style="font-weight: 400">Reimaging bad user interfaces<p>
-						<p style="font-weight: 400">Going on impromptu trips and escaping the real world </p>
-						<p style="font-weight: 400">Hacking away on cool gadgets</p>
-						<p id="about_contact">Want to get in touch? <a href="mailto:nicolekjiang@gmail.com">Let's grab coffee</a>!</p>
-					</li>
-				</ul> 
-			</div><!-- end about_content -->
-		</section>
-		<!-- JOTS -->
-		<section id="jots">
+                s.innerHTML = "root: { --tmp-var: bold; }";
+                document.head.appendChild(s);
+                support = !!(window.CSS && window.CSS.supports && window.CSS.supports('font-weight', 'var(--tmp-var)'));
+                s.parentNode.removeChild(s);
+                return support;
+            }
+            if (!supportsCssVars()) alert('Please view this demo in a modern browser that supports CSS Variables.')
+        </script>
+        <!-- start Mixpanel --><script type="text/javascript">(function(e,a){if(!a.__SV){var b=window;try{var c,l,i,j=b.location,g=j.hash;c=function(a,b){return(l=a.match(RegExp(b+"=([^&]*)")))?l[1]:null};g&&c(g,"state")&&(i=JSON.parse(decodeURIComponent(c(g,"state"))),"mpeditor"===i.action&&(b.sessionStorage.setItem("_mpcehash",g),history.replaceState(i.desiredHash||"",e.title,j.pathname+j.search)))}catch(m){}var k,h;window.mixpanel=a;a._i=[];a.init=function(b,c,f){function e(b,a){var c=a.split(".");2==c.length&&(b=b[c[0]],a=c[1]);b[a]=function(){b.push([a].concat(Array.prototype.slice.call(arguments,
+0)))}}var d=a;"undefined"!==typeof f?d=a[f]=[]:f="mixpanel";d.people=d.people||[];d.toString=function(b){var a="mixpanel";"mixpanel"!==f&&(a+="."+f);b||(a+=" (stub)");return a};d.people.toString=function(){return d.toString(1)+".people (stub)"};k="disable time_event track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config reset opt_in_tracking opt_out_tracking has_opted_in_tracking has_opted_out_tracking clear_opt_in_out_tracking people.set people.set_once people.unset people.increment people.append people.union people.track_charge people.clear_charges people.delete_user".split(" ");
+for(h=0;h<k.length;h++)e(d,k[h]);a._i.push([b,c,f])};a.__SV=1.2;b=e.createElement("script");b.type="text/javascript";b.async=!0;b.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"file:"===e.location.protocol&&"//cdn4.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn4.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn4.mxpnl.com/libs/mixpanel-2-latest.min.js";c=e.getElementsByTagName("script")[0];c.parentNode.insertBefore(b,c)}})(document,window.mixpanel||[]);
+mixpanel.init("cc31d8da9838f9c146f2a5d7d2601895");</script><!-- end Mixpanel -->
 
-			<h3 class="section_title">JOTS</h3>
-			<div class="jots_container">
+    </head>
+    <body>
+        <div class="container">
+            <div class="main">
+                <div class='wrapper'>
+                    <div class="date">
+                        <div class='line1'></div>
+                        <h5>2017</h5>
+                        <div class='line2'></div>
+                    </div>
+                    <div class="mixture" id="scene" data-hover-only='false' > 
+                        
+                        <div data-depth="0.2" class='description'> 
+                            <div  class="position-wrapper">
+                                <h1>nkj</h1>
+                                <h4 class="slogan">Product designer living in the Bay Area. Currently at <span id="mixpanel">Mixpanel</span>.</h4>
+                            </div>
+                        </div>
+                        <div data-depth="-0.3" class="color-blob"></div>
+                        <div data-depth="1" data-friction-x='1' data-friction-y='0.075' class="topo"></div>
+                        <div data-depth="0.5" data-calibrate-x='1000'  class="cloud"></div>
+                        <div class="clear"></div>
 
-				<!-- topic: waitless - fb hack -->
-				<div class="item">
-					<div class="image_wrapper left">
-						<img src="img/jots/waitless/waitless_logo.png">
-					</div>
-					<div class="info_wrapper right">
-						<div class="info_cell">
-							<h2><a href="http://waitless.meteor.com" target="_blank">Waitless</a></h2>
-							<hr>
-							<p>An awesome Facebook Hackathon product</p>
-							<p class="jots_date" style="font-style:italic">January 24th, 2014</p>
-							<a href="#waitless" target="_blank" class="cta click_title"></a>
-						</div>
-					</div>
-					<div class="clearfix"></div>
-					<div class="item_extend" id="waitless">
-						<img class="item_extend_logo" src="img/jots/waitless/logo.gif">
-						<h3 class="item_title">Project</h3> 
-						<p class="item_content">24 Hour hackathon to build something cool. We decided to build a mobile solution that solves our major life annoyance as students - line ups.</br>
-							The prototype app is live at <a href="http://waitless.meteor.com" style="color: #d37f06">http://waitless.meteor.com</a></p>
-						<h3 class="item_title">Some context to things...</h3>
-						<p class="item_content">Bonnie, Joe and I gathered to make this. half an hour before the hack we had no idea what to do. Bonnie then said, you know what annoys me the most? Having to line up for coffee at Tim Hortons everyday. An idea sparked, we are making Waitless.</p> 
-						<h3 class="item_title">Umm.. What is Waitless?</h3>
-						<p class="item_content">Waitless is a problem solver. It is an online solution that lets you order your favourite drink at your nearest locations and pick them up when the order is ready at the time you chose. Try is out and you will see how simple yet effective it is.</p>
+                    </div>
+                    </div>
+               
+            </div>
+            <div class="contact">
+                <div class="links">
+                    <div class='line1'></div>
+                        <h5>LINKS</h5>
+                    <div class='line2'></div>
+                </div>
+                <nav class='contact-list menu menu--adsila'>
+                    <a class="menu__item">
+                        <span class="menu__item-name" id="linkedin" href="http://www.linkedin.com/in/nicolekjiang" target="_blank"><h2>Linkedin</h2></span>
+                        <span class="menu__item-label"><p>Work experience</p></span>
+                    </a>
+                    <a class="menu__item">
+                        <span class="menu__item-name" id="dribbble"><h2>Dribbble</h2></span>
+                        <span class="menu__item-label"><p>Visual design</p></span>
+                    </a>
+                    <a class="menu__item">
+                        <span class="menu__item-name" id="behance"><h2>Behance</h2></span>
+                        <span class="menu__item-label"><p>Case studies</p></span>
+                    </a>
+                    <a class="menu__item">
+                        <span class="menu__item-name" id="email"><h2>Email</h2></span>
+                        <span class="menu__item-label"><p>Say hi, grab coffee, get in touch</p></span>
+                    </a>
+                </nav>
+            </div>
+        </div>
+        <script type="text/javascript">
+            mixpanel.track_links("#linkedin", "Linkedin Clicked", {
+                "referrer": document.referrer
+            });
+        </script>
 
-						<a href="http://waitless.meteor.com" target="_blank"><img style="width: 350px" src="img/jots/waitless/waitless_login.gif"></a></br></br></br>
-						<h3 class="item_title">So... what happened?</h3>
-						<p class="item_content">Bonnie and Joe are awesome developers. I was happy to be the designer. Every single view of the app was mocked up, wireframed, and coded during the hack. There was quite a number of iterations and debugging but I was able to pull out a complete front end by 5am in the morning (Hack started at 6pm)</br></br>
-							A quick breakdown of the app, it contained the following views:</br>
-							<ul style="width: 50%; float:left"><h3>If you're a user</h3>
-								<li><p>Login</p></li>
-								<li><p>Dashboard - contains all goodies</p></li>
-								<li><p>Profile/Settings</p></li>
-								<li><p>Buy drink - 1. location 2.drink type 3.time</p></li>
-							</ul>
-							<ul style="width: 50%; float:right"><h3>If you are a vendor</h3>
-								<li><p>Login</p></li>
-								<li><p>Dashboard - view all upcoming orders</p></li>
-								<ul>
-									<li><p>View all upcoming order</p></li>
-								    <li><p>View lastest incoming order</p></li>
-								</ul>
-							</ul>
-							<div class="clearfix"></div>
-						</br></br>
-						</p>
-						<a href="http://waitless.meteor.com" target="_blank"><img src="img/jots/waitless/waitless_1.png"></a></br></br></br>
-						<ul class="jots_image_list">
-							<li><a href="http://waitless.meteor.com" target="_blank"><img src="img/jots/waitless/buy_one.gif"></a></li>
-							<li><a href="http://waitless.meteor.com" target="_blank"><img src="img/jots/waitless/buy_two.gif"></a></li>
-							<li><a href="http://waitless.meteor.com" target="_blank"><img src="img/jots/waitless/buy_three.gif"></a></li>
-							<li><a href="http://waitless.meteor.com" target="_blank"><img src="img/jots/waitless/buy_four.jpg"></a></li>
-							<p>Buying steps</p></br></br></br>
-						</ul>
-						<h3 class="item_title">Lastly...</h3>
-						<p class="item_content">Well it was 24 hours of sleepless programming and designing, I have to say it I really enjoyed it. Props to Bonnie, Joe and Constance, it was definitely some intense teamwork and it was a thrill to work with all of them.
-						<div id="twitter_frame" style="height:500px">
-							<blockquote class="twitter-tweet" lang="en"><p><a href="https://twitter.com/search?q=%23facebookhackathon&amp;src=hash">#facebookhackathon</a> time with <a href="https://twitter.com/bonnielli">@bonnielli</a> and <a href="https://twitter.com/jomrcr">@jomrcr</a> ! <a href="http://t.co/jDtw0qWT18">pic.twitter.com/jDtw0qWT18</a></p>&mdash; Nicole Jiang (@nicolekjiang) <a href="https://twitter.com/nicolekjiang/statuses/426840604866142210">January 24, 2014</a></blockquote>
-						<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></div></br></br></br>
-						<h3 class="item_title">Ongoing debugging...</h3>
-						<p class="item_content">We managed to get lots of functinalities to work within 20 hours, however, there are still a lot of coming features that we would love to add in.</p>
-						</p><!-- <a id="close">COLLAPSE</a> -->
-					</div><!-- end item_extend -->
-				</div><!-- end item -->
 
-				<div class="clearfix"></div>
 
-				<!-- topic: waterlux -->
-				<div class="item">
-					<div class="image_wrapper right">
-						<img src="img/jots/waterlux/waterlux_logo.jpg">
-					</div>
-					<div class="info_wrapper left">
-						<div class="info_cell">
-							<h2>WaterlUX</h2>
-							<hr>
-							<p>A Friday Night Coding Date Project</p>
-							<p class="jots_date" style="font-style:italic">January 17th, 2014</p>
-							<a href="#waterlux" class="cta click_title"></a>
-						</div>
-					</div>
-					<div class="clearfix"></div>
-					<div class="item_extend" id="waterlux">
-						<img class="item_extend_logo" src="img/jots/waterlux/waterlux_sublogo.jpg">
-						<h3 class="item_title">Project</h3> 
-						<p class="item_content">To design a simple website for <a href="http://waterlux.clubs.feds.ca">WaterlUX</a> - a student club for UI/UX enthusiasts</p>
-						<h3 class="item_title">Some context to things...</h3>
-						<p class="item_content">Like all non-typical fridays, Clarisse and I decided to go on a date, not to the bars but to code. I said okay. </br>
-						WaterlUX is a UWaterloo club that gathers around people who are into UX design. Its a place to learn, talk, and collaborate.</br></br>
-						We needed a website, and a pretty one. My usual routine is to first gather cool ideas and mock up the template first in photoshop. But since we wanted to push the site asap, as soon as we decided on the section contents, I started coding right away.</p> 
 
-						<img src="img/jots/waterlux/waterlux_1.png"></br></br></br></br></br>
-						<h3 class="item_title">So... what happened?</h3>
-						<p class="item_content">We decided on page slide, because each section contains decent amount of material that can have its own page. We wanted parallax to give the site some more flings, and finally, teal theme was what we went with. We started around 9pm on Friday, the site was completed in about 5 - 6 hours. It was a perfect Friday night date. </p>
-						<img src="img/jots/waterlux/waterlux_2.png"></br></br>
-						<h3 class="item_title">Lastly...</h3>
-						<p class="item_content">Many lovely thanks to Clarisse Schneider as this project wouldn't have taken off without her brilliant ideas and dedication for WaterlUX. I definitely enjoyed this project as I not only learned how to code under pressure, but also to get to know a great person and a very dear friend. 
-						<div id="twitter_frame" style="height:500px">
-						<blockquote class="twitter-tweet" lang="en"><p>Long &amp; HardCODE date with <a href="https://twitter.com/claryschneider">@claryschneider</a> working on <a href="https://twitter.com/ByWaterlUX">@ByWaterlUX</a> website! <a href="http://t.co/W8mqHBAuV4">pic.twitter.com/W8mqHBAuV4</a></p>&mdash; Nicole Jiang (@nicolekjiang) <a href="https://twitter.com/nicolekjiang/statuses/424450063297822721">January 18, 2014</a></blockquote>
-						<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></div>
-						<h3 class="item_title">Ongoing debugging...</h3>
-						<p class="item_content">The page slide function created was sweet - but it got rid of the parallax effect and it is not compatible with larger screens, I am still looking into the matter and trying to figure out the most optimal solution towards it. Stay tuned!</p>
-						</p><!-- <a id="close">COLLAPSE</a> -->
-					</div><!-- end item_extend -->
-				</div><!-- end item -->
+        <script src="js/imagesloaded.pkgd.min.js"></script>
 
-				<div class="clearfix"></div>
+        <script type="text/javascript" src="js/jquery.min.js"></script>        
 
-				<!-- topic: click -->
-				<div class="item">
-					<div class="image_wrapper left">
-						<img src="img/jots/click/click.jpg">
-					</div>
-					<div class="info_wrapper right">
-						<div class="info_cell">
-							<h2>CLICK</h2>
-							<hr>
-							<p>Mobile Web Solution For Classroom Interaction</p>
-							<p>January 11th, 2014</p>
-							<a href="#click" class="cta click_title"></a>
-						</div>
-					</div>
-					<div class="clearfix"></div>
-					<div class="item_extend" id="click">
-						<img class="item_extend_logo" src="img/jots/click/click_logo.png">
-						<h3 class="item_title">Project</h3> 
-						<p class="item_content">A mobile solution for iClickr</p>
-						<h3 class="item_title">Purpose</h3>
-						<p class="item_content">To create a easy mobile solution to revamp the iClickr product for the purpose of class question-answer interation. Click is an end to end mobile web solution not only recreating the iClicker functionalities but also to create a online feedback/classroom discussion environment, enabling statistics and analytics.</p> 
-						<h3 class="item_title">Some logistics...</h3>
-						<p class="item_content">This was a projec created </p>
-						<img src="img/jots/click/click_1.png">
-						<img src="img/jots/click/click_2.png">
-						<a id="close">COLLAPSE</a>
-					</div><!-- end item_extend -->
-				</div><!-- end item -->
-				<div class="clearfix"></div>
-			</div>
-		</section><!--  end jots -->
-		<div class="connect" id="connect">
-			<a href="http://www.twitter.com/nicolekjiang"  target="_blank" class="twitter"></a>
-			<a href="http://www.linkedin.com/in/nicolekjiang"  target="_blank" class="linkedin"></a>
-			<a href="http://www.dribbble.com/nicolekjiang"  target="_blank" class="dribbble"></a>
-			<a href="mailto:nicolekjiang@gmail.com" class="email"></a>
-		</div>		
-	</body>
-	<footer>
-		<p>Nicole Jiang © 2014 All rights reserved</p>
-	</footer>
-	<script src="js/jquery.pageslide.js"></script>
-	
-		<script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-		
-		<script type="text/javascript" src="js/jquery.lazyload.js"></script>
-		<script type="text/javascript" src="js/jquery.stellar.js"></script>
-		<script type="text/javascript" src="js/isotope.js"></script>
-	<script>
-		/* SIDEBAR*/
-		$("#navbar_toggle").pageslide();
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
 
-		/* ISOTOPE*/
-		$(window).load(function(){
-			$('#port_container').show();
-			$('#port_container').isotope({
-			  // options
-			  itemSelector : '.item',
-			  layoutMode : 'fitRows'
-			});
-			// cache container
-			var $container = $('#port_container');
-			// initialize isotope
-			$container.isotope({
-			  // options...
-			});
-			// filter items when filter link is clicked
-			$('#filters a').click(function(){
-			  var selector = $(this).attr('data-filter');
-			  $container.isotope({ filter: selector });
-			  return false;
-			});
-		})
-		
 
-		/* PARALLAX*/
-		$(window).stellar({
-			 horizontalScrolling: false,
-		});
+    </body>
+            <script type="text/javascript">
+                $(document).ready(function(){
+                    var scene = document.getElementById('scene');
+                    var parallaxInstance = new Parallax(scene,{
+            
+                        pointerEvents: true
+                    });
 
-		/* FADE*/
-		$(document).ready(function(){
-				var $window = $(window);
-			var $transbg = $('.intro_wrapper'); 	
-				$(window).scroll(function() {
-				var transPos = $window.scrollTop() / 900; 
-				var trans = 1 - transPos;
-				var bylineTrans = 1 - transPos/0.90;
-				$transbg.css("opacity",trans);
-				$('.content').not('.navbar').css("opacity",bylineTrans);
-				$('.snow').css("opacity",bylineTrans);
-				});
-			});
+                     //window.location = "http://www.linkedin.com/in/nicolekjiang";
+                     $('#linkedin').on('click', function(){
+                          window.open('http://www.linkedin.com/in/nicolekjiang','_blank');
+                     })
+                      $('#dribbble').on('click', function(){
+                          window.open('http://www.dribbble.com/nicolekjiang','_blank');
+                     })
+                      $('#behance').on('click', function(){
+                          window.open('http://www.behance.com/nicolekjiang','_blank');
+                     })
+                       $('#email').on('click', function(){
+                          window.open('mailto:hi@nicolejiang.com','_blank');
+                     })
 
-		/* PINNING NAV*/
-		$(window).scroll(function(){
-			$window = $(window);
-			$offset = $('.navbar').offset();
-			if($window.width()>400)
-			{
-				if ($window.scrollTop() > 550){
-					$('.nav_fixed').slideDown('fast');
-					$('.navbar').fadeOut();
-				}
-				else{
-					$(".nav_fixed").slideUp('fast');
-					$('.navbar').fadeIn();
-				}
-			}
-			else{
-				$('.nav_fixed').hide();
-				if ($window.scrollTop() > 310){
-					$('#navbar_toggle').addClass('fix');
-				}
-				else{
-					$('#navbar_toggle').removeClass('fix');
-				}
-			}
-		});
+                       $('#mixpanel').on('click', function(){
+                          window.open('http://mixpanel.com','_blank');
+                     })
+                });
+               
 
-		/* SNOWFLAKES */
-		$(window).scroll(function(){
-			if ($window.scrollTop() > 350){
-				$('.snow').hide();
-			}
-		});
+            </script>
 
-		/* LAZY LOADING*/
-		$(function() {
-		    $('img').not('intro_background').lazyload({
-			    effect : "fadeIn"
-		    });
-		});
 
-		/* TABS */
-		$( ".listing_category" ).click(function(e) {
-			// e.preventDefault(); 
-			var anchor_id = $(this).attr('href');
-			var id = $(this).attr('id');
-			 _.each($(".listing_category"), function(item){
-			 	var anchor =  $(item).attr('href');
-		    	$(anchor).hide();
-		    	$(item).removeClass('active');
-		    });
-			$(anchor_id).fadeIn('slow');
-			$(this).addClass('active');
-			var active_id = $('[id='+id+']');
-			 _.each($(active_id), function(item){
-			 	$(item).addClass('active');
-			 });
-		});
-
-		// Smooth scroll
-		$(document).ready(function() {    
-		  $('a[href*="#"]').on('click.smoothscroll',function(e) {
-		    e.preventDefault();
-		    var target = this.hash;
-		    goScroll(target);
-		  });
-		});
-		function goScroll(target){
-		  $target = $(target);
-		  $('html, body').stop().animate({
-		    'scrollTop': $target.offset().top - 25
-		  }, 500, function () {
-		    window.location.hash = target;
-		  });
-		}
-		//collapse
-		$('.click_title').click(function(e){
-			 e.preventDefault(); 
-			var anchor_id = $(this).attr('href');
-			_.each($(".item_extend"), function(item){
-				var anchor = $(item).attr('id');
-				$('#'+ anchor).not(anchor_id).slideUp('slow');
-			});
-			$(anchor_id).slideToggle('slow');
-		})
-		$('#close').click(function(e){
-			$(this).parent().slideUp();
-			var item = $(this).parent().attr("id");
-			$("#" + item).scrollTop('slow');
-		})
-		</script>
-		<script>
-		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-		  ga('create', 'UA-47014828-1', 'nicolejiang.com');
-		  ga('send', 'pageview');
-
-		</script>
-</html>
+  </html>

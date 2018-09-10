@@ -1,0 +1,261 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+ </head>
+
+ <body>
+ 	<div class="nav">
+ 		
+ 	</div>
+
+ 	<div class="insights-app">
+ 	<!-- Query  -->
+ 		<div class="top-panel">
+ 			<div class="insights-header"><h4>Untitled Report</h4></div>
+ 			<div class="insights-builder">
+ 				<!-- show total -->
+ 				<div class="query-container" id='testquery'>
+ 					<div class="clause-header show-total">Show Total</div>
+ 					<div class="clause-body no-hover">Salesforce: Task Created</div>
+ 				</div>
+
+ 				<!-- group by -->
+ 				<div class="query-container" id="property-query">
+ 					<div class="query-connector">by</div>
+ 					<div class="clause">
+	 					<div class="clause-header group-by">
+	 						<span>People Properties</span>
+		 					<button class='remove-clause'>
+		 						<svg-icon icon="x">
+									<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 22 22">
+										<path d="M14.319 6l-3.319 3.319-3.32-3.319-1.68 1.68 3.319 3.319-3.319 3.319 1.68 1.68 3.32-3.319 3.319 3.319 1.68-1.68-3.319-3.319 3.319-3.319z"></path>
+									</svg>
+								</svg-icon>
+		 					</button>
+	 					</div>
+	 					
+	 					<div class="clause-body no-hover" >Mixpanel: Country</div>
+	 					<a href="#">
+		 					<div class="clause-overflow">
+		 						<svg-icon icon="ellipsis">
+									<svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+									    <g id="16-x-16" stroke="none" stroke-width="1" fill-rule="evenodd">
+								            <g transform="translate(9.000000, 3.000000)" id="Oval">
+								                <circle cx="2" cy="2" r="2"></circle>
+								                <circle cx="2" cy="8" r="2"></circle>
+								                <circle cx="2" cy="14" r="2"></circle>
+								            </g>
+									    </g>
+									</svg>
+								</svg-icon>
+		 					</div>
+	 					</a>	
+ 					</div>
+ 				</div>
+ 				<div class="query-container" id="searchfield" style="display:none">
+ 					<input type="text" placeholder="Search">
+ 				</div>
+
+ 				<!-- Add button -->
+ 				<button id="add-button" data-click-state="1">
+ 					<svg-icon icon="x">
+						<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="22" height="22" viewBox="0 0 22 22">
+							<path d="M14.319 6l-3.319 3.319-3.32-3.319-1.68 1.68 3.319 3.319-3.319 3.319 1.68 1.68 3.32-3.319 3.319 3.319 1.68-1.68-3.319-3.319 3.319-3.319z"></path>
+						</svg>
+					</svg-icon>
+				</button>
+
+				<!-- time -->
+ 				<div class="query-container" >
+ 					<div class="query-connector">in the</div>
+ 					<div class="clause">
+	 					<div class="clause-header group-by">
+	 						Time
+	 					</div>
+	 					
+	 					<div class="clause-body no-hover">Last 96 hours</div>
+ 					</div>
+ 				</div>
+
+				<!-- Property menu -->
+				<div class="menu" id="menu-option-container">
+					<ul class="menu-option">
+						<li id="menu-option-group"><h3>Group by a property</h3></li>
+						<li id="menu-option-compare" class="no-hover"><h3>Compare to an event</h3></li>
+					</ul>
+
+					<div id="menu-property" style="display: none" >
+			 			<div class="menu-header" id="property-header">
+			 				<div class="menu-title">
+			 					<div id="back-arrow">
+			 						<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="22" height="22" viewBox="0 0 22 22">
+			 							<path d="M8.293 10.293l4-4c0.391-0.391 1.023-0.391 1.414 0s0.391 1.023 0 1.414l-3.293 3.293 3.293 3.293c0.391 0.391 0.391 1.023 0 1.414-0.195 0.195-0.451 0.293-0.707 0.293s-0.512-0.098-0.707-0.293l-4-4c-0.391-0.391-0.391-1.023 0-1.414z"></path>
+			 						</svg>
+			 					</div>
+			 					<h3 class="menu-title-text">Group by a property</h3>
+			 				</div>
+			 				<!-- Tabs -->
+			 				<ul class="menu-tab" id="property-tab">
+			 					<li id="all" class="active">All</li>
+			 					<li id="event">Events</li>
+			 					<li id="account">Accounts</li>
+			 					<li id="people">People</li>
+			 					<li id="contact">Contacts</li>
+			 					<li id="lead">Leads</li>
+			 					
+			 					<li class="user-caret" id="user">
+			 						User
+			 						<div id="caret-down"></div>
+			 					</li>
+			 					
+			 					<div class='user-popover' id="user-popover">
+			 						<!-- <li id="people">People</li> -->
+			 						<li id="contact">Contacts</li>
+			 						<li id="lead">Leads</li>
+			 					</div>
+
+
+			 				</ul>
+						</div>	
+						<!-- Content -->
+			 			<div class="menu-content" >
+			 				<ul class="prop-event" id="prop-recent-event">
+			 					<h3 id="prop-recent-event-title">Recent properties</h3>
+			 					<li><p id="item00">City</p></li>
+		 					</ul>
+
+		 					<div class="populate-show-more">
+				 				<ul class="prop-event" id="prop-event">
+				 					<h3 id="prop-event-title">Event properties <span class="dataset-label">Salesforce</span></h3>
+					 					<li><p id="item0">Account IDs</p></li>
+					 					<li><p id="item1">Amount</p></li>
+					 					<li><p id="item2">Billing city</p></li>
+					 					<li><p id="item3">Campaign ID</p></li>
+					 					<li><p id="item4">Closed Date</p></li>
+					 					<li><p id="item5">Created Date</p></li>
+					 					<li><p id="item6">Description</p></li>
+					 					<li><p id="item7">Email</p></li>
+					 					<li><p id="item8">Expected amount</p></li>
+					 					<li><p id="item9">First name</p></li>
+					 					<li><p id="item10">High risk</p></li>
+					 					<li><p id="item11">Last activity</p></li>
+					 					<li><p id="item12">Lead source</p></li>
+					 					<li><p id="item13">MRR</p></li>
+					 					<li><p id="item14">Opportunity closed</p></li>
+					 					<li><p id="item15">Task subtype</p></li>
+			 					</ul>
+
+			 					<ul class="prop-event" id="prop-event-account-all">
+				 					<h3 id="prop-event-title">Account properties<span class="dataset-label">Salesforce</span></h3>
+					 					<li><p id="item0">Account IDs</p></li>
+					 					<li><p id="item1">Amount</p></li>
+					 					<li><p id="item2">Billing city</p></li>
+					 					<li><p id="item3">Campaign ID</p></li>
+					 					<li><p id="item4">Closed Date</p></li>
+					 					<li><p id="item5">Created Date</p></li>
+					 					<li><p id="item6">Description</p></li>
+					 					<li><p id="item7">Email</p></li>
+					 					<li><p id="item8">Expected amount</p></li>
+					 					<li><p id="item9">First name</p></li>
+					 					<li><p id="item10">Industry</p></li>
+					 					<li><p id="item11">Last activity</p></li>
+					 					<li><p id="item12">Lead source</p></li>
+					 					<li><p id="item13">MRR</p></li>
+					 					<li><p id="item14">Opportunity closed</p></li>
+					 					<li><p id="item15">Task subtype</p></li>
+			 					</ul>
+		 					</div>
+
+		 					<div class="user-dropdown populate-show-more">
+			 					<ul class="prop-event" id="prop-event-people">
+				 					<h3 id="prop-event-title">People properties<span class="dataset-label">Mixpanel</span></h3>
+				 					<li><p id="item0">Amount</p></li>
+				 					<li><p id="item1">Annual revenue</p></li>
+				 					<li><p id="item2">Bonus events</p></li>
+				 					<li><p id="item3">City</p></li>
+				 					<li><p id="item4">Company</p></li>
+				 					<li><p id="item5">Competition</p></li>
+				 					<li><p id="item6">Converted</p></li>
+				 					<li><p id="item7">Converted date</p></li>
+				 					<li><p id="item8">Converted opportunity: won</p></li>
+				 					<li><p id="item9">Days to conversion</p></li>
+				 					<li><p id="item10">Days to qualified date</p></li>
+				 					<li><p id="item11">Employees</p></li>
+				 					<li><p id="item12">Event discount</p></li>
+				 					<li><p id="item13">Growth territory</p></li>
+				 					<li><p id="item14">High risk</p></li>
+				 					<li><p id="item15">Last activity</p></li>
+			 					</ul>
+			 					<ul class="prop-event" id="prop-event-contact">
+				 					<h3 id="prop-event-title">Contact properties<span class="dataset-label">Salesforce</span></h3>
+				 					<li><p id="item0">Company size</p></li>
+				 					<li><p id="item1">Contact id</p></li>
+				 					<li><p id="item2">Country</p></li>
+				 					<li><p id="item3">Contact status</p></li>
+				 					<li><p id="item4">Department</p></li>
+				 					<li><p id="item5">Do not call</p></li>
+				 					<li><p id="item6">Domain</p></li>
+				 					<li><p id="item7">Email</p></li>
+				 					<li><p id="item8">Event Tally</p></li>
+				 					<li><p id="item9">Event Plan</p></li>
+				 					<li><p id="item10">Feature gate</p></li>
+				 					<li><p id="item11">First name</p></li>
+				 					<li><p id="item12">Industry</p></li>
+				 					<li><p id="item13">Last activity</p></li>
+				 					<li><p id="item14">Last name</p></li>
+				 					<li><p id="item15">Last seen</p></li> 
+			 					</ul>
+
+			 					<ul class="prop-event" id="prop-event-lead">
+				 					<h3 id="prop-event-title">Lead properties<span class="dataset-label">Salesforce</span></h3>
+				 					<li><p id="item0">AE Segment</p></li>
+				 					<li><p id="item1">Amount</p></li>
+				 					<li><p id="item2">Annual revenue</p></li>
+				 					<li><p id="item3">Bonus events</p></li>
+				 					<li><p id="item4">City</p></li>
+				 					<li><p id="item5">Company</p></li>
+				 					<li><p id="item6">Competition</p></li>
+				 					<li><p id="item7">Converted</p></li>
+				 					<li><p id="item8">Converted date</p></li>
+				 					<li><p id="item9">Converted opportunity: won</p></li>
+				 					<li><p id="item10">Days to conversion</p></li>
+				 					<li><p id="item11">Employees</p></li>
+				 					<li><p id="item12">Event discount</p></li>
+				 					<li><p id="item13">Growth territory</p></li>
+				 					<li><p id="item14">Industry</p></li>
+				 					<li><p id="item15">Lead source</p></li>
+			 					</ul>
+		 					</div>
+
+
+			 			</div>
+			 		</div>
+		 		</div>
+
+		 		<button id="add-filter-button">Filter</button>
+
+ 			</div>
+ 		</div><!-- Top panel -->
+
+ 		<div class="viz">
+ 			<img src="img/viz.png">
+ 		</div>
+
+ 		<ul class="scenarios">
+ 			<li id="s0" style="display:none">0</li>
+ 			<li id="s1" style="display:none">1</li>
+ 			<li id="s2" class="activeScene">1</li>
+ 			<li id="s3">2</li>
+ 		</ul>
+
+
+
+
+
+ 	</div>
+ </body>
+       <script type="text/javascript" src="app.js"></script>
+
+</html>
