@@ -44,37 +44,37 @@ a {
 }
 @keyframes colorchange {
   0% {
-    background: #020124;
+    background: #5A867C;
   }
   25% {
-    background: #48007F;
+    background: #738E74;
   }
   50% {
-    background: #6634BA;
+    background: #989967;
   }
   75% {
-    background: #2F2D45;
+    background: #B1A15E;
   }
   100% {
-    background: #020124;
+    background: #CAA856;
   }
 }
 @-webkit-keyframes colorchange {
   /* Safari and Chrome - necessary duplicate */
   0% {
-    background: #020124;
+    background: #5A867C;
   }
   25% {
-    background: #48007F;
+    background: #738E74;
   }
   50% {
-    background: #6634BA;
+    background: #989967;
   }
   75% {
-    background: #2F2D45;
+    background: #B1A15E;
   }
   100% {
-    background: #020124;
+    background: #CAA856;
   }
 }
 .clear {
